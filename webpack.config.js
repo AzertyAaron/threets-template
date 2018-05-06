@@ -13,10 +13,6 @@ module.exports = {
 		]
 	},
 	mode: 'development',
-	devServer: {
-		contentBase: './build',
-		port: '8080'
-	},
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js']
 	},
