@@ -1,11 +1,12 @@
 {
-  "name": "day-4",
+  "name": "threets-template",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Crawron <azertyaaron@gmail.com>",
-  "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "url": "https://github.com/AzertyAaron/threets-template/tree/master"
   },
   "dependencies": {
     "awesome-typescript-loader": "^5.0.0",
