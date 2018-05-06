@@ -1,23 +1,34 @@
 {
-	"version": "0.1.0",
+	"version": "2.0.0",
 	"command": "myCommand",
-	"isShellCommand": false,
 	"args": [],
-	"showOutput": "always",
+	"reveal": "always",
 	"tasks": [
 		{
-			"taskName": "start",
-			"showOutput": "silent",
-			"command": "webpack-dev-server",
-			"problemMatcher": [
-				"$tsc",
-				"$lessCompile"
-			]
+			"label": "build",
+			"command": "webpack",
+			"group": "build"
 		},
 		{
-			"taskName": "build",
-			"isBuildCommand": true,
-			"command": "webpack"
+			"label": "watch",
+			"command": "webpack",
+			"args": [
+				"--watch"
+			],
+			"group": "build",
+			"problemMatcher": [
+				"$tsc-watch"
+			],
+			"isBackground": true
+		},
+		{
+			// This for some reason doesn't work
+			"label": "start",
+			"options": {
+				"cwd": "${workspaceFolder}/build/"
+			},
+			"command": "live-server",
+			"problemMatcher": []
 		}
 	]
 }

@@ -7,7 +7,14 @@
 			"reAttach": false,
 			"name": "Launch localhost",
 			"url": "http://localhost:8080/index.html",
-			"webRoot": "${workspaceFolder}"
+			"webRoot": "${workspaceFolder}/build"
+		},
+		{
+			"type": "firefox",
+			"request": "launch",
+			"reAttach": true,
+			"name": "Launch index.html",
+			"file": "${workspaceFolder}/build/index.html"
 		}
 	],
 	"compounds": []
