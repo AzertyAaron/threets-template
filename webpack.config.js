@@ -12,6 +12,7 @@ module.exports = {
 			}
 		]
 	},
+	mode: 'development',
 	devServer: {
 		contentBase: './build',
 		port: '8080'
