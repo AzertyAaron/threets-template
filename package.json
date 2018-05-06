@@ -6,7 +6,7 @@
     "dev": "webpack-dev-server"
   },
   "repository": {
-    "url": "https://github.com/AzertyAaron/threets-template/tree/master"
+    "url": "https://github.com/Crawron/threets-template"
   },
   "dependencies": {
     "awesome-typescript-loader": "^5.0.0",
