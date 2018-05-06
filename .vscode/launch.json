@@ -4,7 +4,7 @@
 		{
 			"type": "firefox",
 			"request": "launch",
-			"reAttach": true,
+			"reAttach": false,
 			"name": "Launch localhost",
 			"url": "http://localhost:8080/index.html",
 			"webRoot": "${workspaceFolder}"
