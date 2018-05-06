@@ -1,0 +1,18 @@
+{
+	"version": "0.1.0",
+	"command": "myCommand",
+	"isShellCommand": false,
+	"args": [],
+	"showOutput": "always",
+	"tasks": [
+		{
+			"taskName": "start",
+			"showOutput": "silent",
+			"command": "webpack-dev-server",
+			"problemMatcher": [
+				"$tsc",
+				"$lessCompile"
+			]
+		}
+	]
+}
