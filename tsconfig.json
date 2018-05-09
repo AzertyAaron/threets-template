@@ -6,9 +6,6 @@
     "outDir": "./build/",
     "rootDir": "./src/",
     "removeComments": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true
+    "noImplicitAny": true
   }
 }

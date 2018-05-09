@@ -6,7 +6,7 @@
 			"request": "launch",
 			"reAttach": false,
 			"name": "Launch localhost",
-			"url": "http://localhost:8080/index.html",
+			"url": "http://localhost:5000/index.html",
 			"webRoot": "${workspaceFolder}/build"
 		},
 		{

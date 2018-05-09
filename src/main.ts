@@ -3,9 +3,9 @@ import { mainScene } from "./Scene"
 import { mainCamera } from "./Camera"
 import { box } from "./Box";
 
-const canvas = <HTMLCanvasElement>document.getElementById("main-canvas")
-const renderer = new WebGLRenderer({ canvas: canvas, antialias: true })
+const renderer = new WebGLRenderer({ antialias: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
+document.body.appendChild(renderer.domElement)
 
 function animate() {
 	box.rotation.x += 0.003
