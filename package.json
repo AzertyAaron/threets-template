@@ -2,21 +2,15 @@
   "name": "threets-template",
   "version": "1.0.0",
   "author": "Crawron",
-  "scripts": {
-    "dev": "webpack-dev-server"
-  },
+  "scripts": {},
   "repository": {
     "url": "https://github.com/Crawron/threets-template"
   },
   "dependencies": {
-    "awesome-typescript-loader": "^5.0.0",
-    "three": "^0.92.0",
-    "webpack": "^4.7.0",
-    "webpack-dev-server": "^3.1.4"
+    "three": "^0.92.0"
   },
   "devDependencies": {
     "@types/three": "^0.91.10",
-    "typescript": "^2.8.3",
-    "webpack-cli": "^2.1.2"
+    "typescript": "^2.8.3"
   }
 }
