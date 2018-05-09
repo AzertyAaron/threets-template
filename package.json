@@ -2,7 +2,12 @@
   "name": "threets-template",
   "version": "1.0.0",
   "author": "Crawron",
-  "scripts": {},
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "npm-run-all --parallel start watch",
+    "start": "serve build"
+  },
   "repository": {
     "url": "https://github.com/Crawron/threets-template"
   },
