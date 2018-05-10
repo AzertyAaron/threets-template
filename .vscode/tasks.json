@@ -1,0 +1,22 @@
+{
+	"version": "0.1.0",
+	"command": "myCommand",
+	"isShellCommand": false,
+	"args": [],
+	"showOutput": "always",
+	"tasks": [
+		{
+			"taskName": "build",
+			"showOutput": "silent",
+			"command": "yarn",
+			"args": [
+				"build"
+			],
+			"isBuildCommand": true,
+			"problemMatcher": [
+				"$tsc",
+				"$lessCompile"
+			]
+		}
+	]
+}
