@@ -1,5 +1,5 @@
 # Three.ts Template
-Template for a three.js project using Typescript and Rollup
+Template for a three.js project using TypeScript and Rollup
 
 ## Installation
 Clone the repository into an empty directory, then `cd` into it
