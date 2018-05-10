@@ -13,9 +13,9 @@ class Box {
 	}
 
 	update() {
-		box.mesh.rotation.x = Date.now() / 2000
-		box.mesh.rotation.y = Date.now() / 2000
-		box.mesh.rotation.z = Date.now() / 2000
+		this.mesh.rotation.x = Date.now() / 2000
+		this.mesh.rotation.y = Date.now() / 2000
+		this.mesh.rotation.z = Date.now() / 2000
 	}
 }
 
