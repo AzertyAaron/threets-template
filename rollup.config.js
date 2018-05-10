@@ -1,5 +1,7 @@
 import uglify from 'rollup-plugin-uglify'
 import typescript from 'rollup-plugin-typescript'
+import commonjs from 'rollup-plugin-commonjs'
+import nodeResolve from 'rollup-plugin-node-resolve'
 import path from 'path'
 
 const production = !process.env.ROLLUP_WATCH
@@ -11,13 +13,9 @@ export default {
 		format: 'iife',
 		sourcemap: !production
 	},
-	external: [
-		'three'
-	],
-	globals: {
-		three: "THREE"
-	},
 	plugins: [
+		nodeResolve(),
+		commonjs({ sourceMap: true }),
 		typescript(),
 		production && uglify()
 	]
