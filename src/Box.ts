@@ -1,4 +1,4 @@
-import { BoxBufferGeometry, Mesh, MeshNormalMaterial, Material, BufferGeometry } from "three"
+import { BoxBufferGeometry, Mesh, Material, BufferGeometry, MeshStandardMaterial } from "three"
 
 
 class Box {
@@ -8,7 +8,7 @@ class Box {
 
 	constructor() {
 		this.geometry = new BoxBufferGeometry(1, 1, 1)
-		this.material = new MeshNormalMaterial()
+		this.material = new MeshStandardMaterial({ color: 0x50bbff })
 		this.mesh = new Mesh(this.geometry, this.material)
 	}
 
