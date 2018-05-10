@@ -8,9 +8,7 @@ renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
 function animate() {
-	box.rotation.x += 0.003
-	box.rotation.y += 0.003
-	box.rotation.z += 0.003
+	box.update()
 	requestAnimationFrame(animate)
 
 	renderer.render(mainScene, mainCamera)
