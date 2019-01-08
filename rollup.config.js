@@ -3,6 +3,7 @@ import commonjs from "rollup-plugin-commonjs"
 import resolve from "rollup-plugin-node-resolve"
 import serve from "rollup-plugin-serve"
 import copy from "rollup-plugin-copy"
+import del from "rollup-plugin-delete"
 import glslify from "rollup-plugin-glslify"
 import html from "rollup-plugin-generate-html-template"
 
@@ -20,6 +21,7 @@ export default {
 	},
 	external: ["three"],
 	plugins: [
+		del({ targets: "./dist" }),
 		glslify(),
 		resolve({
 			three: true
