@@ -4,7 +4,7 @@ import { createComposer } from "./createComposer"
 
 const scene = createScene()
 const camera = createCamera()
-const composer = createComposer(scene, camera)
+const { composer, renderer } = createComposer(scene, camera)
 
 function draw() {
 	requestAnimationFrame(draw)
@@ -13,11 +13,12 @@ function draw() {
 }
 
 window.addEventListener("resize", () => {
-	const res = { width: window.innerWidth, height: window.innerHeight }
+	const res = { w: window.innerWidth, h: window.innerHeight }
 
-	composer.setSize(res.width, res.height)
+	renderer.setSize(res.w, res.h, true)
+	composer.setSize(res.w, res.h)
 
-	camera.aspect = res.width / res.height
+	camera.aspect = res.w / res.h
 	camera.updateProjectionMatrix()
 })
 
