@@ -3,7 +3,7 @@
 		"postprocessing": "^5.4.0",
 		"three": "^0.100.0"
 	},
-	"name": "Template",
+	"name": "template",
 	"version": "1.0.0",
 	"main": "dist/main.js",
 	"author": "Crawron",
