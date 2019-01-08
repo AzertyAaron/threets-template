@@ -38,7 +38,8 @@ export default {
 		copy({
 			"./src/assets/": "./dist/assets/",
 			"./node_modules/three/examples/js/postprocessing/":
-				"./dist/js/postprocessing/"
+				"./dist/js/postprocessing/",
+			"./node_modules/three/examples/js/shaders/": "./dist/js/shaders/"
 		}),
 		serve("dist")
 	]
