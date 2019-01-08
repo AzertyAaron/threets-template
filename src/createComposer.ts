@@ -1,11 +1,11 @@
 import { WebGLRenderer, Scene, PerspectiveCamera } from "three"
 import { EffectComposer, CopyShader, ShaderPass, SSAARenderPass } from "three"
 
-export function createComposer(scene: Scene, camera: PerspectiveCamera) {
-	const renderer = new WebGLRenderer({ antialias: true })
-	renderer.setSize(window.innerWidth, window.innerHeight, true)
-	document.body.appendChild(renderer.domElement)
-
+export function createComposer(
+	scene: Scene,
+	camera: PerspectiveCamera,
+	renderer: WebGLRenderer
+) {
 	const composer = new EffectComposer(renderer)
 
 	const ssaa = new SSAARenderPass(scene, camera)
@@ -16,5 +16,5 @@ export function createComposer(scene: Scene, camera: PerspectiveCamera) {
 	composer.addPass(ssaa)
 	composer.addPass(copyPass)
 
-	return { composer, renderer }
+	return composer
 }

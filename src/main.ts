@@ -1,10 +1,16 @@
+import { WebGLRenderer } from "three"
+
 import { createScene } from "./createScene"
 import { createCamera } from "./createCamera"
 import { createComposer } from "./createComposer"
 
+const renderer = new WebGLRenderer({ antialias: true })
+renderer.setSize(window.innerWidth, window.innerHeight, true)
+document.body.appendChild(renderer.domElement)
+
 const scene = createScene()
 const camera = createCamera()
-const { composer, renderer } = createComposer(scene, camera)
+const composer = createComposer(scene, camera, renderer)
 
 function draw() {
 	requestAnimationFrame(draw)
@@ -13,12 +19,10 @@ function draw() {
 }
 
 window.addEventListener("resize", () => {
-	const res = { w: window.innerWidth, h: window.innerHeight }
+	renderer.setSize(window.innerWidth, window.innerHeight, true)
+	composer.setSize(window.innerWidth, window.innerHeight)
 
-	renderer.setSize(res.w, res.h, true)
-	composer.setSize(res.w, res.h)
-
-	camera.aspect = res.w / res.h
+	camera.aspect = window.innerWidth / window.innerHeight
 	camera.updateProjectionMatrix()
 })
 
