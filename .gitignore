@@ -1,4 +1,3 @@
 node_modules
-build/*
-!build/index.html
+dist
 yarn-error.log

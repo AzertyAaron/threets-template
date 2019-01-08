@@ -1,22 +1,39 @@
-import uglify from 'rollup-plugin-uglify'
-import typescript from 'rollup-plugin-typescript'
-import commonjs from 'rollup-plugin-commonjs'
-import nodeResolve from 'rollup-plugin-node-resolve'
-import path from 'path'
-
-const production = !process.env.ROLLUP_WATCH
+import typescript from "rollup-plugin-typescript2"
+import commonjs from "rollup-plugin-commonjs"
+import resolve from "rollup-plugin-node-resolve"
+import serve from "rollup-plugin-serve"
+import copy from "rollup-plugin-copy-assets"
+import glslify from "rollup-plugin-glslify"
+import html from "rollup-plugin-generate-html-template"
 
 export default {
-	input: 'src/main.ts',
+	input: "./src/main.ts",
 	output: {
-		file: 'build/main.js',
-		format: 'iife',
-		sourcemap: !production
+		file: "./dist/main.js",
+		format: "iife",
+		sourcemap: true
+	},
+	watch: {
+		chokidar: true,
+		include: "./src/**"
 	},
 	plugins: [
-		nodeResolve(),
-		commonjs({ sourceMap: true }),
-		typescript(),
-		production && uglify()
+		glslify(),
+		resolve({
+			three: true
+		}),
+		commonjs(),
+		typescript({
+			clean: true,
+			rollupCommonJSResolveHack: true
+		}),
+		html({
+			template: "src/template.html",
+			target: "index.html"
+		}),
+		copy({
+			assets: ["./src/assets"]
+		}),
+		serve("dist")
 	]
 }

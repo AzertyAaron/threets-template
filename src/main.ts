@@ -1,14 +1,24 @@
-import { renderer } from "./Renderer"
-import { mainScene } from "./Scene"
-import { mainCamera } from "./Camera"
-import { box } from "./Box"
+import { createScene } from "./createScene"
+import { createCamera } from "./createCamera"
+import { createComposer } from "./createComposer"
 
+const scene = createScene()
+const camera = createCamera()
+const composer = createComposer(scene, camera)
 
-function animate() {
-	requestAnimationFrame(animate)
+function draw() {
+	requestAnimationFrame(draw)
 
-	box.update()
-	renderer.render(mainScene, mainCamera)
+	composer.render()
 }
 
-animate()
+window.addEventListener("resize", () => {
+	const res = { width: window.innerWidth, height: window.innerHeight }
+
+	composer.setSize(res.width, res.height)
+
+	camera.aspect = res.width / res.height
+	camera.updateProjectionMatrix()
+})
+
+draw()

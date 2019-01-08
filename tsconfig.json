@@ -1,11 +1,13 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "./build/",
-    "rootDir": "./src/",
-    "removeComments": true,
-    "noImplicitAny": true
-  }
+	"compilerOptions": {
+		"target": "es6",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"removeComments": true,
+		"strict": true,
+		"noImplicitAny": true
+	}
 }
