@@ -11,12 +11,14 @@ export default {
 	output: {
 		file: "./dist/main.js",
 		format: "iife",
+		globals: { three: "THREE" },
 		sourcemap: true
 	},
 	watch: {
 		chokidar: true,
 		include: "./src/**"
 	},
+	external: ["three"],
 	plugins: [
 		glslify(),
 		resolve({
