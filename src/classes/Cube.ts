@@ -5,10 +5,12 @@ export class Cube {
 
 	rotation = new Euler()
 
-	update() {
-		this.rotation.x += 0.03
-		this.rotation.y += 0.03
-		this.rotation.z += 0.03
+	update(delta: number) {
+		this.rotation.x += 0.001 * delta
+		this.rotation.y += 0.001 * delta
+		this.rotation.z += 0.001 * delta
+
+		this.updateMesh()
 	}
 
 	updateMesh() {
