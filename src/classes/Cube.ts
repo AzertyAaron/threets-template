@@ -6,9 +6,9 @@ export class Cube {
 	rotation = new Euler()
 
 	update() {
-		this.rotation.x += 0.1
-		this.rotation.y += 0.1
-		this.rotation.z += 0.1
+		this.rotation.x += 0.03
+		this.rotation.y += 0.03
+		this.rotation.z += 0.03
 	}
 
 	updateMesh() {
